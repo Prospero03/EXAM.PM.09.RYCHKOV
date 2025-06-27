@@ -1,0 +1,114 @@
+.calculator-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.calculator-container h2 {
+  text-align: center;
+  color: black;
+  margin-bottom: 1.5rem;
+}
+
+.calculator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: black;
+}
+
+.form-group input, 
+.form-group select {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.services-group {
+  border-top: 1px solid #eee;
+  padding-top: 1rem;
+}
+
+.service-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background-color 0.2s;
+}
+
+
+.service-option input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.service-option label {
+  font-weight: normal;
+  cursor: pointer;
+  flex: 1;
+}
+
+.calculate-btn {
+  background-color: rgb(120, 12, 251);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.calculate-btn:hover {
+  background-color: rgb(100, 0, 231);
+}
+
+.result {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border: 1px solid gray;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.result h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.result p {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #27ae60;
+  margin: 0.5rem 0;
+}
+
+.result small {
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .calculator-container {
+      margin: 1rem;
+      padding: 1rem;
+  }
+}

@@ -1,0 +1,58 @@
+.container-nav{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Добавляем перенос элементов */
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+    align-items: center;
+    gap: 10px; /* Добавляем отступ между элементами */
+}
+
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /* Добавляем перенос ссылок */
+    gap: 10px;
+    justify-content: flex-end; /* Выравниваем ссылки по правому краю */
+    flex: 1; /* Занимаем доступное пространство */
+    min-width: 0; /* Позволяет сжиматься */
+}
+
+.nav-link{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all ease 0.3s;
+    white-space: nowrap; /* Запрещаем перенос текста в ссылках */
+}
+.nav-link:hover{
+    cursor: pointer;
+    color: rgb(120, 12, 251);
+}
+
+.nav-logo{
+    width: auto;
+    height: 50px;
+    margin-right: 20px; /* Добавляем отступ от ссылок */
+}
+
+@media only screen and (max-width: 720px) {
+    .container-nav {
+        justify-content: center; /* Центрируем элементы на маленьких экранах */
+    }
+    
+    .nav-links {
+        justify-content: center; /* Центрируем ссылки */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .nav-logo {
+        height: 40px; /* Уменьшаем логотип на очень маленьких экранах */
+    }
+    
+    .nav-link {
+        font-size: 14px; /* Уменьшаем размер шрифта */
+    }
+}

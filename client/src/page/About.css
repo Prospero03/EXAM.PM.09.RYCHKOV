@@ -1,0 +1,158 @@
+/* About.css */
+.about-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .about-page h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: black;
+    font-size: 2.2em;
+  }
+  
+  .about-page h2 {
+    color: black;
+    margin: 30px 0 20px;
+    font-size: 1.8em;
+  }
+  
+  .about-page h3 {
+    color: black;
+    margin: 15px 0 10px;
+    font-size: 1.4em;
+  }
+  
+  .about-page p {
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  /* Стили для разделов */
+  .container-about-company,
+  .container-about-work,
+  .about-review {
+    margin-bottom: 40px;
+  }
+  
+  .container-about-single {
+    
+    padding: 20px;
+    
+    margin-bottom: 20px;
+    
+  }
+  
+  .container-about-last {
+   
+    padding: 20px;
+
+    margin-top: 30px;
+  }
+  
+  /* Стили для галереи работ */
+  .container-about-work {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    gap: 10px
+  }
+  
+  .about-work-single {
+    width: calc(33.333% - 14px);
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    padding: 5px;
+
+  }
+  
+
+  
+  /* Стили для отзывов */
+  .container-about-review {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .about-review-single {
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .about-review-single h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  
+  /* Адаптивные стили */
+  @media only screen and (max-width: 900px) {
+    .about-work-single {
+      width: calc(50% - 10px);
+      height: 200px;
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .about-page h1 {
+      font-size: 1.8em;
+    }
+    
+    .about-page h2 {
+      font-size: 1.5em;
+    }
+    
+    .about-page h3 {
+      font-size: 1.3em;
+    }
+    
+    .container-about-single,
+    .container-about-last,
+    .about-review-single {
+      padding: 15px;
+    }
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .about-page {
+      padding: 15px;
+    }
+    
+    .about-work-single {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+    }
+    
+    .about-review-single {
+      min-width: 100%;
+    }
+    
+    .container-about-review {
+      gap: 15px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .about-page h1 {
+      font-size: 1.6em;
+      margin-bottom: 20px;
+    }
+    
+    .about-page h2 {
+      font-size: 1.4em;
+      margin: 20px 0 15px;
+    }
+    
+    .about-page p {
+      font-size: 0.95em;
+    }
+  }

@@ -1,0 +1,131 @@
+/* Services.css */
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .services-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    font-size: 2.2em;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+  
+  .service-card {
+    background: white;
+    border-radius: 10px;
+    border: 1px solid gainsboro;
+    overflow: hidden;
+
+  }
+  
+
+  
+  .service-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .service-content {
+    padding: 20px;
+  }
+  
+  .service-title {
+    color: black;
+    margin-bottom: 10px;
+    font-size: 1.4em;
+  }
+  
+  .service-description {
+    color: black;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  .service-price {
+    font-weight: bold;
+    color: #27ae60;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+  }
+  
+  .service-examples {
+    margin-top: 15px;
+  }
+  
+  .examples-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: black;
+  }
+  
+  .examples-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  .example-item {
+    margin-bottom: 5px;
+    color: black;
+    display: flex;
+    align-items: center;
+  }
+  
+  .example-item::before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+  
+  .loading, .error-message {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2em;
+  }
+  
+  .error-message {
+    color: #e74c3c;
+  }
+  
+  /* Адаптивные стили */
+  @media only screen and (max-width: 768px) {
+    .services-grid {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    
+    .services-title {
+      font-size: 1.8em;
+      margin-bottom: 30px;
+    }
+    
+    .service-content {
+      padding: 15px;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .services-container {
+      padding: 15px;
+    }
+    
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .service-title {
+      font-size: 1.3em;
+    }
+  }

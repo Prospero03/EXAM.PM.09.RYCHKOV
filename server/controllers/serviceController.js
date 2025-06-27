@@ -1,6 +1,6 @@
 const Service = require("../models/service");
 
-exports.getAllService = async(req,res)=>{
+exports.getAllServices = async(req,res)=>{
     try {
         const services = await Service.find({})
         return res
@@ -13,34 +13,39 @@ exports.getAllService = async(req,res)=>{
     }
 }
 
-exports.getSingleService = async(req,res) =>{
+
+
+exports.createService = async (req, res) => {
     try {
-        const service = await Service.findById(req.params.id)
-        return res
-            .status(200)
-            .json({success: true, data:service})
+        const { title, description, price, example } = req.body;
+        
+        // Проверка обязательных полей
+        if (!title || !description || !price ||! example) {
+            return res.status(400).json({
+                success: false,
+                error: "Необходимо указать название, описание и цену"
+            });
+        }
+
+        const newService = new Service({
+            title,
+            description,
+            price,
+            example
+        });
+
+        const savedService = await newService.save();
+        
+        return res.status(201).json({
+            success: true,
+            message: "Продукт успешно создан",
+            data: savedService
+        });
     } catch (error) {
-        return res  
-            .status(500)
-            .json({success: false, error: "Ошибка Сервера"})
+        console.error(error);
+        return res.status(500).json({
+            success: false,
+            error: "Ошибка сервера при создании продукта"
+        });
     }
-}
-
-exports.addService = async(req,res) => {
-    try {
-        const {title, description, price, image} = req.body;
-
-        const newService = new Service({title, description, price, image});
-        await newService.save()
-
-    
-        return res
-            .status(200)
-            .json({success: true, message: "Вы успешно добавли услугу"})
-    } catch (error) {
-        return res  
-            .status(500)
-            .json({success: false, error: "Ошибка Сервера"})
-    }
-}
-
+};
